@@ -1,7 +1,7 @@
 **Tweet Analyzer**
 
 Tweet Analyzer is a sentiment analysis project that classifies tweets as positive or negative based on a given keyword. The project also provides data visualization using bar, line, and pie charts to enhance the analysis. Additionally, it displays all classified tweets.
-Features
+Features\n
 
 Sentiment classification of tweets (Positive / Negative)
 
@@ -13,7 +13,7 @@ Sentiment classification of tweets (Positive / Negative)
 Displays all positive and negative tweets
 
 **Tech Stack**
-  Python
+  Python\n
   Flask
   
 **Dataset**
