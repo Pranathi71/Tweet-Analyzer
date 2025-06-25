@@ -3,5 +3,5 @@ from app import create_app
 
 app = create_app()
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     app.run(debug=False)
