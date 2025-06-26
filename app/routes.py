@@ -1,12 +1,15 @@
 from flask import render_template, request
 import pandas as pd
 from transformers import pipeline
-import matplotlib.pyplot as plt
+
 import io
 import base64
+import matplotlib
+matplotlib.use('Agg')  # Use a non-GUI backend suitable for servers
+import matplotlib.pyplot as plt
 
 # Load the BERT sentiment analysis model
-sentiment_analyzer = pipeline("sentiment-analysis")
+sentiment_analyzer = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 
 # Route to render the index page with the form
 def index():
