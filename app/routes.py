@@ -3,11 +3,6 @@ from flask import render_template, request
 import pandas as pd
 from transformers import pipeline
 
-import io
-import base64
-import matplotlib
-matplotlib.use('Agg')  # Use a non-GUI backend suitable for servers
-import matplotlib.pyplot as plt
 
 # Load the BERT sentiment analysis model
 sentiment_analyzer = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
@@ -26,7 +21,7 @@ def results():
     # Filter tweets that contain the keyword (case-insensitive)
     filtered_df = df[df['Text'].str.contains(keyword, case=False, na=False)]
 
-    # Initialize sentiment counters (positive, negative, neutral)
+    # Initialize sentiment counters (positive, negative)
     sentiment_labels = ['Positive', 'Negative']
     sentiment_values = [0, 0]
     
