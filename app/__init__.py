@@ -1,4 +1,4 @@
-# app/_init_.py
+# app/_init_.py (app becomes a package)
 from flask import Flask
 
 def create_app():
